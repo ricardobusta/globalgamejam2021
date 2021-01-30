@@ -56,11 +56,6 @@ public class GameNetworkManager : NetworkManager
         conn.Send(playerMessage);
     }
 
-    public override void OnClientDisconnect(NetworkConnection conn)
-    {
-        base.OnClientDisconnect(conn);
-    }
-
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -83,5 +78,15 @@ public class GameNetworkManager : NetworkManager
     {
         base.OnStopHost();
         HostStoppedEvent?.Invoke();
+    }
+
+    public bool TryStartGame()
+    {
+        if (numPlayers < 3)
+        {
+            return false;
+        }
+
+        return true;
     }
 }

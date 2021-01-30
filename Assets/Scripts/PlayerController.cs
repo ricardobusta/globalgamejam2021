@@ -3,27 +3,22 @@ using UnityEngine;
 
 namespace GameJam
 {
-    [RequireComponent(typeof(BodyMovement)), RequireComponent(typeof(Rigidbody))]
     public class PlayerController : NetworkBehaviour
     {
         [SerializeField] private BodyMovement _bodyMovement;
-        [SerializeField] private Rigidbody _rigidBody;
+        [SerializeField] private Rigidbody2D _rigidBody;
 
         public Color color;
 
-        private void Start()
+        public override void OnStartClient()
         {
-            var rend = GetComponent<Renderer>();
-            var mat = new Material(rend.material) {color = color};
-            rend.material = mat;
+            base.OnStartClient();
+            var rend = GetComponent<SpriteRenderer>();
+            rend.color = color;
         }
-        
+
         private void FixedUpdate()
         {
-            var rend = GetComponent<Renderer>();
-            var mat = new Material(rend.material) {color = color};
-            rend.material = mat;
-            
             if (!isLocalPlayer) return;
 
             Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);

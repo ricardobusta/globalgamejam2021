@@ -26,6 +26,10 @@ namespace GameJam
         [Header("Canvases")]
         public Canvas networkConnectCanvas;
         public Canvas networkInfoCanvas;
+        public Canvas startGameCanvas;
+
+        [Header("StartGame")] 
+        public Button startGameButton;
 
         private const ushort DEFAULT_PORT = 7778;
 
@@ -33,7 +37,7 @@ namespace GameJam
         {
             hostAddress.SetTextWithoutNotify(networkManager.networkAddress);
             
-            ToggleCanvas(false);
+            ToggleCanvas(false, false);
             hostAndClientButton.onClick.AddListener(() =>
             {
                 transport.port = GetPort(hostPort.text);
@@ -72,16 +76,24 @@ namespace GameJam
                         networkManager.StopServer();
                     }
                 }
-                ToggleCanvas(false);
+                ToggleCanvas(false, false);
+            });
+            
+            startGameButton.onClick.AddListener(() =>
+            {
+                if (networkManager.TryStartGame())
+                {
+                    startGameCanvas.gameObject.SetActive(false);
+                }
             });
 
-            networkManager.ClientStartedEvent += () => { ToggleCanvas(true); };
-            networkManager.ServerStartedEvent += () => { ToggleCanvas(true); };
-            networkManager.HostStartedEvent += () => { ToggleCanvas(true); };
+            networkManager.ClientStartedEvent += () => { ToggleCanvas(true, false); };
+            networkManager.ServerStartedEvent += () => { ToggleCanvas(true, true); };
+            networkManager.HostStartedEvent += () => { ToggleCanvas(true, true); };
             
-            networkManager.ClientStoppedEvent += () => { ToggleCanvas(false); };
-            networkManager.ServerStoppedEvent += () => { ToggleCanvas(false); };
-            networkManager.HostStoppedEvent += () => { ToggleCanvas(false); };
+            networkManager.ClientStoppedEvent += () => { ToggleCanvas(false, false); };
+            networkManager.ServerStoppedEvent += () => { ToggleCanvas(false, true); };
+            networkManager.HostStoppedEvent += () => { ToggleCanvas(false, true); };
         }
 
         private ushort GetPort(string portString)
@@ -99,10 +111,11 @@ namespace GameJam
             serverInfo.text = $"Transport: {Transport.activeTransport}\nAddress: {networkManager.networkAddress}:{transport.port}";
         }
 
-        private void ToggleCanvas(bool info)
+        private void ToggleCanvas(bool info, bool isHost)
         {
             networkConnectCanvas.gameObject.SetActive(!info);
             networkInfoCanvas.gameObject.SetActive(info);
+            startGameCanvas.gameObject.SetActive(info && isHost);
             UpdateInfo();
         }
     }

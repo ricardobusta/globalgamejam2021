@@ -25,7 +25,7 @@ namespace GameJam
 
         public Movement ProcessUpdate(float deltaTime)
         {
-            var inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+            var inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
             if (inputDirection.sqrMagnitude > float.Epsilon)
             {
                 _direction = inputDirection.normalized;
@@ -38,7 +38,7 @@ namespace GameJam
 
             var rotation = transform.rotation;
             var rotate = _direction != Vector3.zero
-                ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(_direction),
+                ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(Vector3.forward, _direction),
                     _rotationSpeed * deltaTime)
                 : rotation;
             return new Movement(rotate, _direction * (_movementSpeed * _maxSpeed * deltaTime));
