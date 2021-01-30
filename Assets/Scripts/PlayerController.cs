@@ -1,3 +1,4 @@
+using System;
 using Mirror;
 using UnityEngine;
 
@@ -8,13 +9,19 @@ namespace GameJam
         [SerializeField] private BodyMovement _bodyMovement;
         [SerializeField] private Rigidbody2D _rigidBody;
 
+        public SpriteRenderer playerSprite;
+
         public Color color;
 
         public override void OnStartClient()
         {
             base.OnStartClient();
-            var rend = GetComponent<SpriteRenderer>();
-            rend.color = color;
+            playerSprite.color = color;
+        }
+
+        public void LateUpdate()
+        {
+            playerSprite.transform.rotation = Quaternion.identity;
         }
 
         private void FixedUpdate()
