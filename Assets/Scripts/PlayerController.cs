@@ -14,6 +14,8 @@ namespace GameJam
         private float _movementSpeed;
         private Vector3 _direction;
 
+        public Rigidbody rb;
+
         void Update()
         {
             if (!isLocalPlayer) return;
@@ -33,11 +35,21 @@ namespace GameJam
                 _movementSpeed -= movementGravity;
             }
 
+            var tr = transform;
+            
             if (_movementSpeed > 0)
             {
-                var tr = transform;
-                tr.position += _direction * (movementMaxSpeed * Time.deltaTime);
-                tr.rotation = Quaternion.RotateTowards(tr.rotation, Quaternion.LookRotation(_direction), rotationSpeed * Time.deltaTime);
+                rb.velocity = _direction * (movementMaxSpeed);
+            }
+            else
+            {
+                rb.velocity = Vector3.zero;
+            }
+
+            if (_direction != Vector3.zero)
+            {
+                tr.rotation = Quaternion.RotateTowards(tr.rotation, Quaternion.LookRotation(_direction),
+                    rotationSpeed * Time.deltaTime);
             }
         }
     }
