@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
@@ -15,6 +13,41 @@ namespace GameJam
         private Vector3 _direction;
 
         public Rigidbody rb;
+
+        [SyncVar] public Color playerColor;
+        private Color previousColor;
+
+        public Renderer renderer;
+
+        private static readonly Color[] PlayerColors = new[]
+        {
+            Color.red,
+            Color.blue,
+            Color.green,
+            Color.cyan,
+            Color.yellow,
+            Color.black,
+            Color.white,
+        };
+
+        private void Start()
+        {
+            if (isLocalPlayer)
+            {
+                playerColor = PlayerColors[Random.Range(0, PlayerColors.Length)];
+                previousColor = playerColor;
+            }
+        }
+
+        private void Update()
+        {
+            if (previousColor != playerColor)
+            {
+                var material = new Material(renderer.material) {color = playerColor};
+                renderer.material = material;
+                previousColor = playerColor;
+            }
+        }
 
         private void FixedUpdate()
         {
@@ -37,12 +70,12 @@ namespace GameJam
 
             var tr = transform;
 
-            rb.velocity = _direction * _movementSpeed * movementMaxSpeed * Time.deltaTime;
+            rb.velocity = _direction * _movementSpeed * movementMaxSpeed * Time.fixedDeltaTime;
 
             tr.rotation = Quaternion.RotateTowards(
                 tr.rotation,
                 Quaternion.LookRotation(_direction),
-                rotationSpeed * Time.deltaTime
+                rotationSpeed * Time.fixedDeltaTime
             );
         }
     }
