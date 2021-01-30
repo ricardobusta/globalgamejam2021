@@ -35,37 +35,6 @@ namespace GameJam
                 transport.port = GetPort(hostPort.text);
                 networkManager.StartClient();
             });
-            
-            disconnectButton.onClick.AddListener(() =>
-            {
-                if (NetworkClient.isConnected)
-                {
-                    if (NetworkServer.active)
-                    {
-                        networkManager.StopHost();
-                    }
-                    else
-                    {
-                        networkManager.StopClient();
-                    }
-                }
-                else
-                {
-                    if (NetworkServer.active)
-                    {
-                        networkManager.StopServer();
-                    }
-                }
-                ToggleCanvas(false);
-            });
-            
-            startGameButton.onClick.AddListener(() =>
-            {
-                // if (networkManager.TryStartGame())
-                // {
-                //     startGameCanvas.gameObject.SetActive(false);
-                // }
-            });
 
             //networkManager.ClientStartedEvent += () => { ToggleCanvas(true); };
             //networkManager.ServerStartedEvent += () => { ToggleCanvas(true); };
