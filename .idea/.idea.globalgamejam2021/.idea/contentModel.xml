@@ -15,6 +15,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="GameNetworkManager.cs" t="Include" />
           <e p="NetworkManagerUi.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
