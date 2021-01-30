@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ui.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUiRoot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUiRoot.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +55,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameRoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/ThirdParty/Mirror/Editor/SceneDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OfflineUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUiRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
       </list>
     </option>
   </component>
@@ -114,7 +122,7 @@
       <updated>1612009930239</updated>
       <workItem from="1612009948120" duration="9494000" />
       <workItem from="1612043330154" duration="40000" />
-      <workItem from="1612043545858" duration="1004000" />
+      <workItem from="1612043545858" duration="1689000" />
     </task>
     <servers />
   </component>
