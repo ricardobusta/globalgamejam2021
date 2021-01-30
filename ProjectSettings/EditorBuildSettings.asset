@@ -11,13 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomScene.unity
     guid: 19e14e4ef4f117f4fb47810d68b3c3f5
-  - enabled: 1
-    path: Assets/ThirdParty/Mirror/Examples/Room/Scenes/OfflineScene.unity
-    guid: 9e6f14982412b2545a0911ebaaa46a23
-  - enabled: 1
-    path: Assets/ThirdParty/Mirror/Examples/Room/Scenes/OnlineScene.unity
-    guid: d7a6763559b31854586c9e49916273ef
-  - enabled: 1
-    path: Assets/ThirdParty/Mirror/Examples/Room/Scenes/RoomScene.unity
-    guid: 48478f4d522f96945b8396f376299d3a
   m_configObjects: {}
