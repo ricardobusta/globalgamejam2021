@@ -9,6 +9,7 @@ namespace GameJam
     {
         public Button hostAndClientButton;
         public Button clientButton;
+        public Button serverButton;
         public TMP_InputField hostAddress;
         public TMP_InputField hostPort;
 
@@ -34,6 +35,15 @@ namespace GameJam
                 transport.port = GetPort(hostPort.text);
                 networkManager.StartClient();
             });
+
+            if (serverButton != null)
+            {
+                serverButton.onClick.AddListener(() =>
+                {
+                    transport.port = GetPort(hostPort.text);
+                    networkManager.StartServer();
+                });
+            }
         }
 
         private ushort GetPort(string portString)

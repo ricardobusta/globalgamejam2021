@@ -1,4 +1,5 @@
 ﻿using Mirror;
+using Mirror.SimpleWeb;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,11 +8,15 @@ namespace GameJam
 {
     public class RoomUi : MonoBehaviour
     {
+        public TMP_Text serverInfo;
         public Button stopButton;
         
         private void Start()
         {
             var networkManager = FindObjectOfType<GameNetworkManager>();
+            var transport = FindObjectOfType<SimpleWebTransport>();
+            
+            serverInfo.text = $"Transport: {Transport.activeTransport}\nAddress: {networkManager.networkAddress}:{transport.port}";
 
             SetupStopButton(networkManager);
         }
