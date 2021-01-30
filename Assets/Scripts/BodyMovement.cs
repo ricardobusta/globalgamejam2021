@@ -31,17 +31,29 @@ namespace GameJam
                 _direction = inputDirection.normalized;
                 _movementSpeed = Mathf.Min(1, _movementSpeed + _acceleration);
             }
-            else if (_movementSpeed > 0)
+            else
             {
                 _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
             }
 
-            var rotation = transform.rotation;
-            var rotate = _direction != Vector3.zero
+            if (_movementSpeed <= Mathf.Epsilon)
+            {
+                _movementSpeed = 0;
+            }
+
+            Quaternion rotation = transform.rotation;
+            Quaternion rotate = _direction != Vector3.zero
                 ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(Vector3.forward, _direction),
                     _rotationSpeed * deltaTime)
                 : rotation;
-            return new Movement(rotate, _direction * (_movementSpeed * _maxSpeed * deltaTime));
+
+            Vector3 movement = Vector3.zero;
+            if (_movementSpeed > Mathf.Epsilon)
+            {
+                movement = _direction * _movementSpeed * _maxSpeed * deltaTime;
+            }
+
+            return new Movement(rotate, movement);
         }
     }
 }
