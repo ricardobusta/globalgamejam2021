@@ -16,7 +16,7 @@ namespace GameJam
 
         public Rigidbody rb;
 
-        void Update()
+        private void FixedUpdate()
         {
             if (!isLocalPlayer) return;
 
@@ -25,32 +25,25 @@ namespace GameJam
 
             var inputDirection = new Vector3(h, 0, v);
 
-            if (inputDirection != Vector3.zero)
+            if (inputDirection.sqrMagnitude > float.Epsilon)
             {
-                _movementSpeed = 1;
                 _direction = inputDirection.normalized;
+                _movementSpeed = Mathf.Min(1, _movementSpeed + movementGravity);
             }
             else if (_movementSpeed > 0)
             {
-                _movementSpeed -= movementGravity;
+                _movementSpeed = Mathf.Max(0, _movementSpeed - movementGravity);
             }
 
             var tr = transform;
-            
-            if (_movementSpeed > 0)
-            {
-                rb.velocity = _direction * (movementMaxSpeed);
-            }
-            else
-            {
-                rb.velocity = Vector3.zero;
-            }
 
-            if (_direction != Vector3.zero)
-            {
-                tr.rotation = Quaternion.RotateTowards(tr.rotation, Quaternion.LookRotation(_direction),
-                    rotationSpeed * Time.deltaTime);
-            }
+            rb.velocity = _direction * _movementSpeed * movementMaxSpeed * Time.deltaTime;
+
+            tr.rotation = Quaternion.RotateTowards(
+                tr.rotation,
+                Quaternion.LookRotation(_direction),
+                rotationSpeed * Time.deltaTime
+            );
         }
     }
 }

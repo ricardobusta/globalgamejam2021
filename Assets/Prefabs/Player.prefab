@@ -182,8 +182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  rotationSpeed: 360
-  movementMaxSpeed: 10
+  rotationSpeed: 1000
+  movementMaxSpeed: 1000
   movementGravity: 0.1
   rb: {fileID: -6902806567882117356}
 --- !u!136 &3505128530919221772
