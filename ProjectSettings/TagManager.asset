@@ -11,7 +11,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
+  - Light
   - 
   - 
   - 
@@ -38,9 +38,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 484770847
+    locked: 0
+  - name: Scenario
+    uniqueID: 1185427179
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 2308889349
+  - name: Prey
+    uniqueID: 670816589
+    locked: 0
+  - name: Props
+    uniqueID: 825809195
+    locked: 0
+  - name: Predator
+    uniqueID: 2146061181
     locked: 0
