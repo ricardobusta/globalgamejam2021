@@ -1,4 +1,3 @@
-using System;
 using Mirror;
 using UnityEngine;
 
@@ -28,9 +27,8 @@ namespace GameJam
         {
             if (!isLocalPlayer) return;
 
-            Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
-            _rigidBody.velocity = movement.Velocity;
-            transform.rotation = movement.Rotation;
+            var movement = _bodyMovement.ProcessUpdate(Time.fixedDeltaTime);
+            _rigidBody.velocity = movement.velocity;
         }
     }
 }

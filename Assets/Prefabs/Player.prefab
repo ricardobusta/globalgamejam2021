@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9fd8f849e45b14690f6b07615a3c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSpeed: 500
-  _rotationSpeed: 750
+  _maxSpeed: 10
+  _rotationSpeed: 1
   _acceleration: 0.1
 --- !u!114 &-6021017385097322919
 MonoBehaviour:
@@ -241,9 +241,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.24360839}
   serializedVersion: 2
-  m_Radius: 0.63
+  m_Radius: 0.3863916
 --- !u!212 &7701127035151083289
 SpriteRenderer:
   m_ObjectHideFlags: 0

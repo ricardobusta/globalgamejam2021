@@ -2,18 +2,6 @@ using UnityEngine;
 
 namespace GameJam
 {
-    public struct Movement
-    {
-        public Quaternion Rotation { get; }
-        public Vector3 Velocity { get; }
-
-        public Movement(Quaternion rotation, Vector3 velocity)
-        {
-            Rotation = rotation;
-            Velocity = velocity;
-        }
-    }
-
     public class BodyMovement : MonoBehaviour
     {
         [SerializeField] private float _maxSpeed;
@@ -22,8 +10,9 @@ namespace GameJam
 
         private float _movementSpeed;
         private Vector3 _direction;
+        private Vector3 _lookDirection = Vector3.up;
 
-        public Movement ProcessUpdate(float deltaTime)
+        public (Vector3 velocity, Vector3 lookDirection) ProcessUpdate(float deltaTime)
         {
             var inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
             if (inputDirection.sqrMagnitude > float.Epsilon)
@@ -35,13 +24,11 @@ namespace GameJam
             {
                 _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
             }
-
-            var rotation = transform.rotation;
-            var rotate = _direction != Vector3.zero
-                ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(Vector3.forward, _direction),
-                    _rotationSpeed * deltaTime)
-                : rotation;
-            return new Movement(rotate, _direction * (_movementSpeed * _maxSpeed * deltaTime));
+            
+            _lookDirection = _direction != Vector3.zero
+                ? Vector3.RotateTowards(_lookDirection, _direction, _rotationSpeed * deltaTime, 0)
+                : _lookDirection;
+            return (_direction * (_movementSpeed * _maxSpeed), _lookDirection);
         }
     }
 }

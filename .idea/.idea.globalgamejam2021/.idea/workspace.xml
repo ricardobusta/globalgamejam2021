@@ -23,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +48,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreatePlayerMessage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" />
       </list>
     </option>
   </component>
