@@ -8,40 +8,36 @@ namespace GameJam
     public class PlayerController : NetworkBehaviour
     {
         public float rotationSpeed;
-        public float movementSpeed;
+        public float movementMaxSpeed;
+        public float movementGravity;
 
-        // Start is called before the first frame update
-        void Start()
-        {
+        private float _movementSpeed;
+        private Vector3 _direction;
 
-        }
-
-        // Update is called once per frame
         void Update()
         {
             if (!isLocalPlayer) return;
 
-            //var 
-            var h = Input.GetAxis("Horizontal");
-            var v = Input.GetAxis("Vertical");
+            var h = Input.GetAxisRaw("Horizontal");
+            var v = Input.GetAxisRaw("Vertical");
 
-            // var h = Input.GetAxisRaw("Horizontal");
-            // var h = Input.GetAxisRaw("Vertical");
-            
-            var direction = new Vector3(h, 0, v);
+            var inputDirection = new Vector3(h, 0, v);
 
-            var directionMagnitude = direction.sqrMagnitude;
-            if (directionMagnitude > 1)
+            if (inputDirection != Vector3.zero)
             {
-                direction = direction.normalized;
+                _movementSpeed = 1;
+                _direction = inputDirection.normalized;
+            }
+            else if (_movementSpeed > 0)
+            {
+                _movementSpeed -= movementGravity;
             }
 
-            if (direction != Vector3.zero)
+            if (_movementSpeed > 0)
             {
                 var tr = transform;
-
-                tr.position += direction * (movementSpeed * Time.deltaTime);
-                tr.forward = direction;
+                tr.position += _direction * (movementMaxSpeed * Time.deltaTime);
+                tr.rotation = Quaternion.RotateTowards(tr.rotation, Quaternion.LookRotation(_direction), rotationSpeed * Time.deltaTime);
             }
         }
     }

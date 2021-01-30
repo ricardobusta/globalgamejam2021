@@ -195,8 +195,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  rotationSpeed: 10
-  movementSpeed: 10
+  rotationSpeed: 360
+  movementMaxSpeed: 10
+  movementGravity: 0.1
 --- !u!136 &3505128530919221772
 CapsuleCollider:
   m_ObjectHideFlags: 0
