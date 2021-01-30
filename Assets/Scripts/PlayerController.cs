@@ -20,6 +20,10 @@ namespace GameJam
         
         private void FixedUpdate()
         {
+            var rend = GetComponent<Renderer>();
+            var mat = new Material(rend.material) {color = color};
+            rend.material = mat;
+            
             if (!isLocalPlayer) return;
 
             Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);

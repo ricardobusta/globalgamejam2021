@@ -9,7 +9,7 @@ namespace GameJam
     public class NetworkManagerUi : MonoBehaviour
     {
         [Header("Network")]
-        public NetworkManager networkManager;
+        public GameNetworkManager networkManager;
         public SimpleWebTransport transport;
 
         [Header("Connection Interface")]
@@ -38,7 +38,6 @@ namespace GameJam
             {
                 transport.port = GetPort(hostPort.text);
                 networkManager.StartHost();
-                ToggleCanvas(true);
             });
             
             clientButton.onClick.AddListener(() =>
@@ -46,13 +45,11 @@ namespace GameJam
                 networkManager.networkAddress = hostAddress.text;
                 transport.port = GetPort(hostPort.text);
                 networkManager.StartClient();
-                ToggleCanvas(true);
             });
             
             serverButton.onClick.AddListener(() =>
             {
                 networkManager.StartServer();
-                ToggleCanvas(true);
             });
             
             disconnectButton.onClick.AddListener(() =>
@@ -77,6 +74,14 @@ namespace GameJam
                 }
                 ToggleCanvas(false);
             });
+
+            networkManager.ClientStartedEvent += () => { ToggleCanvas(true); };
+            networkManager.ServerStartedEvent += () => { ToggleCanvas(true); };
+            networkManager.HostStartedEvent += () => { ToggleCanvas(true); };
+            
+            networkManager.ClientStoppedEvent += () => { ToggleCanvas(false); };
+            networkManager.ServerStoppedEvent += () => { ToggleCanvas(false); };
+            networkManager.HostStoppedEvent += () => { ToggleCanvas(false); };
         }
 
         private ushort GetPort(string portString)
