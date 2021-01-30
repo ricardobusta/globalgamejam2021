@@ -9,6 +9,15 @@ namespace GameJam
         [SerializeField] private BodyMovement _bodyMovement;
         [SerializeField] private Rigidbody _rigidBody;
 
+        public Color color;
+
+        private void Start()
+        {
+            var rend = GetComponent<Renderer>();
+            var mat = new Material(rend.material) {color = color};
+            rend.material = mat;
+        }
+        
         private void FixedUpdate()
         {
             if (!isLocalPlayer) return;

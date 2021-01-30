@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1516045101646367963}
   - component: {fileID: 8424187377504497139}
   - component: {fileID: 1775624770060657161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3505128530919221772}
   - component: {fileID: 1638052708267689091}
   - component: {fileID: 4869526738581222609}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,6 +200,7 @@ MonoBehaviour:
   syncInterval: 0.1
   _bodyMovement: {fileID: 3508246410170796180}
   _rigidBody: {fileID: -6902806567882117356}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &-6902806567882117356
 Rigidbody:
   m_ObjectHideFlags: 0

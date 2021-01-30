@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GameJam
 {
-    public class Movement
+    public struct Movement
     {
         public Quaternion Rotation { get; }
         public Vector3 Velocity { get; }
@@ -42,7 +42,7 @@ namespace GameJam
                     Quaternion.LookRotation(_direction),
                     _rotationSpeed * deltaTime
                 ),
-                _direction * _movementSpeed * _maxSpeed * deltaTime
+                _direction * (_movementSpeed * _maxSpeed * deltaTime)
             );
 
         }
