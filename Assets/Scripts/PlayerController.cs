@@ -1,49 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 
 namespace GameJam
 {
+    [RequireComponent(typeof(BodyMovement)), RequireComponent(typeof(Rigidbody))]
     public class PlayerController : NetworkBehaviour
     {
-        public float rotationSpeed;
-        public float movementMaxSpeed;
-        public float movementGravity;
-
-        private float _movementSpeed;
-        private Vector3 _direction;
-
-        public Rigidbody rb;
+        [SerializeField] private BodyMovement _bodyMovement;
+        [SerializeField] private Rigidbody _rigidBody;
 
         private void FixedUpdate()
         {
             if (!isLocalPlayer) return;
 
-            var h = Input.GetAxisRaw("Horizontal");
-            var v = Input.GetAxisRaw("Vertical");
-
-            var inputDirection = new Vector3(h, 0, v);
-
-            if (inputDirection.sqrMagnitude > float.Epsilon)
-            {
-                _direction = inputDirection.normalized;
-                _movementSpeed = Mathf.Min(1, _movementSpeed + movementGravity);
-            }
-            else if (_movementSpeed > 0)
-            {
-                _movementSpeed = Mathf.Max(0, _movementSpeed - movementGravity);
-            }
-
-            var tr = transform;
-
-            rb.velocity = _direction * _movementSpeed * movementMaxSpeed * Time.deltaTime;
-
-            tr.rotation = Quaternion.RotateTowards(
-                tr.rotation,
-                Quaternion.LookRotation(_direction),
-                rotationSpeed * Time.deltaTime
-            );
+            Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
+            _rigidBody.velocity = movement.Velocity;
+            transform.rotation = movement.Rotation;
         }
     }
 }
