@@ -38,4 +38,9 @@ public class GameNetworkManager : NetworkManager
         
         conn.Send(playerMessage);
     }
+
+    public override void OnClientDisconnect(NetworkConnection conn)
+    {
+        base.OnClientDisconnect(conn);
+    }
 }

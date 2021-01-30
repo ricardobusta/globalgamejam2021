@@ -36,16 +36,12 @@ namespace GameJam
                 _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
             }
 
-            return new Movement(
-                Quaternion.RotateTowards(
-                    transform.rotation,
-                    Quaternion.LookRotation(_direction),
-                    _rotationSpeed * deltaTime
-                ),
-                _direction * (_movementSpeed * _maxSpeed * deltaTime)
-            );
-
+            var rotation = transform.rotation;
+            var rotate = _direction != Vector3.zero
+                ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(_direction),
+                    _rotationSpeed * deltaTime)
+                : rotation;
+            return new Movement(rotate, _direction * (_movementSpeed * _maxSpeed * deltaTime));
         }
-
     }
 }
