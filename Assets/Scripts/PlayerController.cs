@@ -15,7 +15,7 @@ namespace GameJam
         public override void OnStartClient()
         {
             base.OnStartClient();
-            playerSprite.color = color;
+            //playerSprite.color = color;
         }
 
         public void LateUpdate()

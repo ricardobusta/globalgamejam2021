@@ -7,7 +7,7 @@ namespace GameJam
 {
     public class OfflineUi : MonoBehaviour
     {
-        [Header("Connection Interface")] public Button hostAndClientButton;
+        public Button hostAndClientButton;
         public Button clientButton;
         public TMP_InputField hostAddress;
         public TMP_InputField hostPort;
@@ -20,6 +20,7 @@ namespace GameJam
             var transport = FindObjectOfType<SimpleWebTransport>();
 
             hostAddress.SetTextWithoutNotify(networkManager.networkAddress);
+            hostPort.SetTextWithoutNotify(transport.port.ToString());
 
             hostAndClientButton.onClick.AddListener(() =>
             {
