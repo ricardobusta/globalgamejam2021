@@ -25,7 +25,7 @@ namespace GameJam
         public TMP_Text playerReadyLabel;
         public Button kickButton;
         public Image playerImage;
-
+        
         [Header("Player Identity")] 
         [SyncVar]
         public string playerName;
@@ -41,6 +41,8 @@ namespace GameJam
         {
             base.Start();
             var roomUi = FindObjectOfType<RoomUi>();
+            
+            _isMyPlayer = NetworkClient.active && isLocalPlayer;
 
             var tr = rootObject.transform;
             tr.SetParent(roomUi.roomPlayerRoot);
@@ -52,25 +54,25 @@ namespace GameJam
             playerNameLabel.text = playerName;
             playerIdLabel.text = $"Player {index + 1}";
             UpdateReadyLabel();
-
-            _isMyPlayer = NetworkClient.active && isLocalPlayer;
-
-            roomUi.readyButton.gameObject.SetActive(_isMyPlayer);
-            var readyButtonLabel = roomUi.readyButton.GetComponentInChildren<TMP_Text>();
-            UpdateButtonLabel(readyButtonLabel, false);
-            roomUi.readyButton.onClick.AddListener(() =>
-            {
-                UpdateButtonLabel(readyButtonLabel, !readyToBegin);
-                CmdChangeReadyState(!readyToBegin);
-            });
-
+            
             var showKickButton = (isServer && index > 0) || isServerOnly;
             kickButton.gameObject.SetActive(showKickButton);
             kickButton.onClick.AddListener(() => { GetComponent<NetworkIdentity>().connectionToClient.Disconnect(); });
 
             playerColor = PlayerColors[index % PlayerColors.Length];
             playerImage.color = playerColor;
-
+            
+            if (_isMyPlayer)
+            {
+                var readyButtonLabel = roomUi.readyButton.GetComponentInChildren<TMP_Text>();
+                UpdateButtonLabel(readyButtonLabel, false);
+                roomUi.readyButton.onClick.AddListener(() =>
+                {
+                    UpdateButtonLabel(readyButtonLabel, !readyToBegin);
+                    CmdChangeReadyState(!readyToBegin);
+                });
+            }
+            
             _started = true;
         }
 
