@@ -22,21 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/GameNetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/GameNetworkManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/OnlineUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OnlineUi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" afterDir="false" />
-    </list>
+    <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +116,7 @@
       <updated>1612009930239</updated>
       <workItem from="1612009948120" duration="9494000" />
       <workItem from="1612043330154" duration="40000" />
-      <workItem from="1612043545858" duration="8350000" />
+      <workItem from="1612043545858" duration="8830000" />
     </task>
     <servers />
   </component>
