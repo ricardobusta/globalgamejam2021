@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FieldOfView : MonoBehaviour
@@ -12,6 +11,8 @@ public class FieldOfView : MonoBehaviour
 
     private void Update()
     {
+        if (_target == null) return;
+
         Vector2 movement = (_target.position - transform.position) * _followSpeed * Time.deltaTime;
         transform.position += new Vector3(movement.x, movement.y);
     }

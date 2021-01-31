@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1409554679419729907}
   - component: {fileID: 1409554679419729906}
+  - component: {fileID: 1409554679419729911}
   - component: {fileID: 1409554679419729905}
   - component: {fileID: 1409554679419729904}
-  - component: {fileID: 1409554679419729911}
   m_Layer: 6
   m_Name: FOV
   m_TagString: Untagged
@@ -50,6 +50,27 @@ MonoBehaviour:
   _followSpeed: 30
   _litMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _diffuseMaterial: {fileID: 2100000, guid: 521b7b069da85b940927c3a147776bec, type: 2}
+--- !u!50 &1409554679419729911
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409554679419729900}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &1409554679419729905
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -128,24 +149,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!50 &1409554679419729911
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409554679419729900}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

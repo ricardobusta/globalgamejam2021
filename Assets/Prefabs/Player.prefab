@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 500
-  _rotationSpeed: 750
+  _rotationSpeed: 50
   _acceleration: 0.1
 --- !u!114 &-6021017385097322919
 MonoBehaviour:
