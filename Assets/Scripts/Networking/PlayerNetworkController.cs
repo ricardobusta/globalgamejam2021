@@ -31,6 +31,8 @@ namespace GameJam
 
         public void PlayerIndexChanged(int _, int newValue)
         {
+            Debug.Log(newValue);
+            index = newValue;
             animator.runtimeAnimatorController = playerAnimator[newValue];
         }
     }
