@@ -80,16 +80,14 @@ public class MyNetworkRoomManager : NetworkRoomManager
 #endif
     }
 
-    public override void OnGUI()
+    public bool ShouldShowStartButton()
     {
-        base.OnGUI();
+        return allPlayersReady && showStartButton;
+    }
 
-        if (allPlayersReady && showStartButton && GUI.Button(new Rect(150, 300, 120, 20), "START GAME"))
-        {
-            // set to false to hide it in the game scene
-            showStartButton = false;
-
-            ServerChangeScene(GameplayScene);
-        }
+    public void OnStartButtonClicked()
+    {
+        showStartButton = false;
+        ServerChangeScene(GameplayScene);
     }
 }

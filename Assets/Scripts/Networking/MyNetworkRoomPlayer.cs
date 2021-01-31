@@ -27,9 +27,9 @@ namespace GameJam
         public Image playerImage;
         
         [Header("Player Identity")] 
-        [SyncVar]
+        [SyncVar(hook = nameof(PlayerNameChanged))]
         public string playerName;
-        [SyncVar]
+        [SyncVar(hook = nameof(PlayerColorChanged))]
         public Color playerColor;
 
         private bool _isMyPlayer;
@@ -37,11 +37,20 @@ namespace GameJam
 
         private bool _started;
 
+        private Action _updateReadyAction;
+
         private new void Start()
         {
             base.Start();
             var roomUi = FindObjectOfType<RoomUi>();
-            
+
+            _updateReadyAction = ()=>
+            {
+                if (roomUi != null)
+                {
+                    roomUi.UpdateReadyStatus();
+                }
+            };
             _isMyPlayer = NetworkClient.active && isLocalPlayer;
 
             var tr = rootObject.transform;
@@ -49,9 +58,10 @@ namespace GameJam
             tr.localScale = Vector3.one;
             tr.position = Vector3.zero;
             
+            playerColor = PlayerColors[index % PlayerColors.Length];
+            
             tempCanvas.gameObject.SetActive(false);
 
-            playerNameLabel.text = playerName;
             playerIdLabel.text = $"Player {index + 1}";
             UpdateReadyLabel();
             
@@ -59,9 +69,6 @@ namespace GameJam
             kickButton.gameObject.SetActive(showKickButton);
             kickButton.onClick.AddListener(() => { GetComponent<NetworkIdentity>().connectionToClient.Disconnect(); });
 
-            playerColor = PlayerColors[index % PlayerColors.Length];
-            playerImage.color = playerColor;
-            
             if (_isMyPlayer)
             {
                 var readyButtonLabel = roomUi.readyButton.GetComponentInChildren<TMP_Text>();
@@ -74,6 +81,16 @@ namespace GameJam
             }
             
             _started = true;
+        }
+
+        public void PlayerNameChanged(string _, string newName)
+        {
+            playerNameLabel.text = newName;
+        }
+
+        public void PlayerColorChanged(Color _, Color newColor)
+        {
+            playerImage.color = newColor;
         }
 
         private void OnDestroy()
@@ -101,6 +118,7 @@ namespace GameJam
             if (_previouslyReady != readyToBegin)
             {
                 _previouslyReady = readyToBegin;
+                _updateReadyAction?.Invoke();
                 UpdateReadyLabel();
             }
         }

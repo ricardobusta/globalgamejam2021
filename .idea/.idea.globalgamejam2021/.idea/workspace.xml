@@ -24,7 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Offline.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +59,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OnlineUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/ThirdParty/Mirror/Components/NetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
       </list>
@@ -120,7 +126,7 @@
       <updated>1612009930239</updated>
       <workItem from="1612009948120" duration="9494000" />
       <workItem from="1612043330154" duration="40000" />
-      <workItem from="1612043545858" duration="15205000" />
+      <workItem from="1612043545858" duration="18686000" />
     </task>
     <servers />
   </component>
@@ -213,14 +219,14 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612089716867" />
-    <state x="2535" y="119" width="689" height="801" key="find.popup" timestamp="1612044011488">
+    <state x="2535" y="119" width="689" height="801" key="find.popup" timestamp="1612096196856">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2535" y="119" width="689" height="801" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044011488" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612089709650">
+    <state x="2535" y="119" width="689" height="801" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612096196856" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612096617192">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612089709650" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612096617192" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

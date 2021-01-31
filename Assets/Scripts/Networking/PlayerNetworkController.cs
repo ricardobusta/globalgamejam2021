@@ -10,17 +10,20 @@ namespace GameJam
 
         public SpriteRenderer spriteRenderer;
         
-        [SyncVar]
+        [SyncVar(hook = nameof(PlayerColorChanged))]
         public Color color;
 
         private void FixedUpdate()
         {
-            spriteRenderer.color = color;
-            
             if (!isLocalPlayer) return;
 
             var movement = _bodyMovement.ProcessUpdate(Time.fixedDeltaTime);
             _rigidBody.velocity = movement.velocity;
+        }
+
+        public void PlayerColorChanged(Color _, Color newValue)
+        {
+            spriteRenderer.color = newValue;
         }
     }
 }

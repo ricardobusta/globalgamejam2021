@@ -652,7 +652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -112.9}
+  m_AnchoredPosition: {x: 0, y: -112.8999}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &331650656
@@ -1413,7 +1413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 40.4}
+  m_AnchoredPosition: {x: 0, y: 40.399902}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1208252909
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  showRoomGUI: 1
+  showRoomGUI: 0
   minPlayers: 1
   roomPlayerPrefab: {fileID: 3858719613207603559, guid: 538b5b5159ce31a40ba46576d41aaff8, type: 3}
   RoomScene: Assets/Scenes/Networking/Room.unity
