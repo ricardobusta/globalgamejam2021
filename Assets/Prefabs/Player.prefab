@@ -178,7 +178,6 @@ MonoBehaviour:
   - {fileID: 22100000, guid: c17b03d4e64b2624dbde61c077ea0cb6, type: 2}
   - {fileID: 22100000, guid: 2f06342cadd5d434ca0c3cccdaf05ce2, type: 2}
   - {fileID: 22100000, guid: e792d05d38cf27244a9b8049a8a538b6, type: 2}
-  color: {r: 0, g: 0, b: 0, a: 0}
   index: 0
 --- !u!114 &1638052708267689091
 MonoBehaviour:

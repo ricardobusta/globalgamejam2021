@@ -454,10 +454,9 @@ GameObject:
   - component: {fileID: 2549015973636180896}
   - component: {fileID: 6413800439088401110}
   - component: {fileID: 1269699061933258893}
-  - component: {fileID: 5848782339045903361}
   - component: {fileID: 8324009828158326356}
   m_Layer: 5
-  m_Name: RoomPlayerOld
+  m_Name: PlayerContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,22 +524,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5848782339045903361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232421724040034743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
 --- !u!114 &8324009828158326356
 MonoBehaviour:
   m_ObjectHideFlags: 0
