@@ -23,10 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HumanPlayer.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HumanPlayer.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HumanPlayer_Walking.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/HumanPlayer_Walking.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +35,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Projects/globalgamejam2021/Assets/Scripts/Ui/OfflineUi.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -58,8 +55,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OnlineUi.cs" />
         <option value="$PROJECT_DIR$/Assets/ThirdParty/Mirror/Components/NetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyMatchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
       </list>
@@ -217,6 +214,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612089716867" />
+    <state x="2012" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1612123096637">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2012" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612123096637" />
     <state x="2535" y="119" width="689" height="801" key="find.popup" timestamp="1612098519133">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: HumanPlayer2
   m_Controller: {fileID: 9100000, guid: 24b7444bb8bb6714aa36cc8fd62d1301, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 90699824c7d74544ebe414ec40437f62, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dfa9e8d120533d7418c61346764a7ae6, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 82b042217fc0b0e44ab1936248c44c52, type: 2}
