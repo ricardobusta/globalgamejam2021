@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" afterDir="false" />
-    </list>
+    <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/2DBasics/FieldOfView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" />
+        <option value="$PROJECT_DIR$/LICENSE.md" />
       </list>
     </option>
   </component>
