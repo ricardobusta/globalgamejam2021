@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MyNetworkRoomManager : NetworkRoomManager
 {
-    [Header("Spawner Setup")] [Tooltip("Reward Prefab for the Spawner")]
-    public GameObject rewardPrefab;
+    [Header("Spawner Setup")]
+    public MyMatchController matchController;
 
     /// <summary>
     /// This is called on the server when a networked scene finishes loading.
@@ -15,7 +15,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         if (sceneName == GameplayScene)
         {
-            //Spawner.InitialSpawn();
+            NetworkServer.Spawn(Instantiate(matchController).gameObject);
         }
     }
 

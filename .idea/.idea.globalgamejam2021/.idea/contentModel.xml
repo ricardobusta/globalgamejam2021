@@ -21,6 +21,7 @@
           </e>
           <e p="BodyMovement.cs" t="Include" />
           <e p="Networking" t="Include">
+            <e p="MyMatchController.cs" t="Include" />
             <e p="MyNetworkRoomManager.cs" t="Include" />
             <e p="MyNetworkRoomPlayer.cs" t="Include" />
             <e p="PlayerNetworkController.cs" t="Include" />
