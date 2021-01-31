@@ -1,3 +1,4 @@
+using System;
 using Mirror;
 using UnityEngine;
 
@@ -12,11 +13,13 @@ namespace GameJam
         public Animator animator;
         public RuntimeAnimatorController[] playerAnimator;
         
-        [SyncVar(hook = nameof(PlayerColorChanged))]
-        public Color color;
-        
         [SyncVar(hook = nameof(PlayerIndexChanged))]
         public int index;
+
+        private void Awake()
+        {
+            animator.runtimeAnimatorController = playerAnimator[0];
+        }
 
         private void FixedUpdate()
         {
@@ -26,10 +29,6 @@ namespace GameJam
             _rigidBody.velocity = movement.velocity;
         }
 
-        public void PlayerColorChanged(Color _, Color newValue)
-        {
-        }
-        
         public void PlayerIndexChanged(int _, int newValue)
         {
             animator.runtimeAnimatorController = playerAnimator[newValue];

@@ -8,6 +8,9 @@ public class MyNetworkRoomManager : NetworkRoomManager
     [Header("Spawner Setup")]
     public MyMatchController matchController;
 
+    [Header("Assets Refs")]
+    public RuntimeAnimatorController[] playerAnimations;
+
     /// <summary>
     /// This is called on the server when a networked scene finishes loading.
     /// </summary>
@@ -29,12 +32,9 @@ public class MyNetworkRoomManager : NetworkRoomManager
     {
         var roomObject = roomPlayer.GetComponent<MyNetworkRoomPlayer>();
         var playerObject = gamePlayer.GetComponent<PlayerNetworkController>();
-
-        playerObject.color = roomObject.playerColor;
+        
         playerObject.index = roomObject.index;
-        Debug.Log($"Color: {playerObject.color}");
-        //PlayerScore playerScore = gamePlayer.GetComponent<PlayerScore>();
-        //playerScore.index = roomPlayer.GetComponent<NetworkRoomPlayer>().index;
+        //playerObject.playerAnimation = playerAnimations[roomObject.index];
         return true;
     }
 
