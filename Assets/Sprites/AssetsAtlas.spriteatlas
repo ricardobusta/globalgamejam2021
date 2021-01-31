@@ -38,47 +38,83 @@ SpriteAtlas:
       padding: 4
       blockOffset: 1
       allowAlphaSplitting: 0
-      enableRotation: 1
-      enableTightPacking: 1
+      enableRotation: 0
+      enableTightPacking: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 00e221f6f1343fe46b1632d704ac9860, type: 3}
     - {fileID: 2800000, guid: b64efc7322c9c7c43b0fa0d5083f3761, type: 3}
+    - {fileID: 2800000, guid: 3867b2ade0633c34eb1fef98ddc5ddd1, type: 3}
+    - {fileID: 2800000, guid: 948f30e8f80fb924a9c7555f6b722ab7, type: 3}
+    - {fileID: 2800000, guid: 84ab56c541fa7014a8c59fde5929e2f5, type: 3}
+    - {fileID: 2800000, guid: a12fd0d6407da414eafe3d14255c05ad, type: 3}
     - {fileID: 2800000, guid: 51e584034b7e93e48bb7c12434a078c4, type: 3}
     - {fileID: 2800000, guid: f7ea488fa640cf14a8fd5c4256da519e, type: 3}
+    - {fileID: 2800000, guid: da55c600ee3feca4fabd708c90478bcf, type: 3}
+    - {fileID: 2800000, guid: a31e646ef1dcdf848ab210130b6190ed, type: 3}
     - {fileID: 2800000, guid: d54970685ad924e45949a4cc679f9d1a, type: 3}
     - {fileID: 2800000, guid: 5eb5476911b69e64ead744ed76145cbb, type: 3}
+    - {fileID: 2800000, guid: 73008615ce3ef994eb26cd44fe32a8e2, type: 3}
     - {fileID: 2800000, guid: 5900be7d0f9432f4bb82c95841dfe64d, type: 3}
     - {fileID: 2800000, guid: d4aa1194bd2c64841b3e56f1114efbad, type: 3}
-    - {fileID: 2800000, guid: 3867b2ade0633c34eb1fef98ddc5ddd1, type: 3}
-    - {fileID: 2800000, guid: 84ab56c541fa7014a8c59fde5929e2f5, type: 3}
-    totalSpriteSurfaceArea: 4133900
+    - {fileID: 2800000, guid: 0f56435e5a95013468b5d9fe84000139, type: 3}
+    - {fileID: 2800000, guid: b5736c3401fb0564c8f493697afaf44d, type: 3}
+    - {fileID: 2800000, guid: ec51f92b05588ab499a87eae4bd6bd10, type: 3}
+    - {fileID: 2800000, guid: d595584f09d65c34aadc33e188361faa, type: 3}
+    - {fileID: 2800000, guid: af5d884de796d08419da14ad1eb957ac, type: 3}
+    - {fileID: 2800000, guid: b00fd547d305d86499b451c6f717ee6f, type: 3}
+    - {fileID: 2800000, guid: 09217aad2ad29324bb416a868fae43cf, type: 3}
+    totalSpriteSurfaceArea: 6315440
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: da55c600ee3feca4fabd708c90478bcf, type: 3}
   - {fileID: 21300000, guid: 51e584034b7e93e48bb7c12434a078c4, type: 3}
   - {fileID: 21300000, guid: b64efc7322c9c7c43b0fa0d5083f3761, type: 3}
+  - {fileID: 21300000, guid: b5736c3401fb0564c8f493697afaf44d, type: 3}
   - {fileID: 21300000, guid: d4aa1194bd2c64841b3e56f1114efbad, type: 3}
+  - {fileID: 21300000, guid: 73008615ce3ef994eb26cd44fe32a8e2, type: 3}
   - {fileID: 21300000, guid: 84ab56c541fa7014a8c59fde5929e2f5, type: 3}
+  - {fileID: 21300000, guid: a12fd0d6407da414eafe3d14255c05ad, type: 3}
   - {fileID: 21300000, guid: 00e221f6f1343fe46b1632d704ac9860, type: 3}
+  - {fileID: 21300000, guid: b00fd547d305d86499b451c6f717ee6f, type: 3}
   - {fileID: 21300000, guid: d54970685ad924e45949a4cc679f9d1a, type: 3}
+  - {fileID: 21300000, guid: 948f30e8f80fb924a9c7555f6b722ab7, type: 3}
   - {fileID: 21300000, guid: 5eb5476911b69e64ead744ed76145cbb, type: 3}
+  - {fileID: 21300000, guid: ec51f92b05588ab499a87eae4bd6bd10, type: 3}
+  - {fileID: 21300000, guid: af5d884de796d08419da14ad1eb957ac, type: 3}
   - {fileID: 21300000, guid: 5900be7d0f9432f4bb82c95841dfe64d, type: 3}
   - {fileID: 21300000, guid: 3867b2ade0633c34eb1fef98ddc5ddd1, type: 3}
+  - {fileID: 21300000, guid: 09217aad2ad29324bb416a868fae43cf, type: 3}
+  - {fileID: 21300000, guid: 0f56435e5a95013468b5d9fe84000139, type: 3}
+  - {fileID: 21300000, guid: a31e646ef1dcdf848ab210130b6190ed, type: 3}
+  - {fileID: 21300000, guid: d595584f09d65c34aadc33e188361faa, type: 3}
   - {fileID: 21300000, guid: f7ea488fa640cf14a8fd5c4256da519e, type: 3}
   m_PackedSpriteNamesToIndex:
+  - catt_lose
   - cat_1
   - banquinho
+  - character_3_1
   - character_4
+  - character_1w
   - mesa
+  - geladeira
   - background
+  - character_4_2
   - character_1
+  - mesona
   - character_2
+  - character_3_2
+  - character_4_1
   - character_3
   - estante
+  - character_4_3
+  - character_3_w
+  - catt_win
+  - character_3_3
   - cat_2
   m_RenderDataMap: {}
   m_Tag: AssetsAtlas
