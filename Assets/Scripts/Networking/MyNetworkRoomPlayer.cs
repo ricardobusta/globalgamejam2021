@@ -8,15 +8,29 @@ namespace GameJam
 {
     public class MyNetworkRoomPlayer : NetworkRoomPlayer
     {
+        private static readonly Color[] PlayerColors =
+        {
+            Color.red,
+            Color.blue,
+            Color.green,
+            Color.yellow,
+            Color.white,
+        };
+
         [Header("References")] 
+        public Canvas tempCanvas;
+        public GameObject rootObject;
         public TMP_Text playerNameLabel;
         public TMP_Text playerIdLabel;
         public TMP_Text playerReadyLabel;
+        public Button kickButton;
+        public Image playerImage;
 
-        public Button playerReadyButton;
-
-        [Header("Player Identity")]
+        [Header("Player Identity")] 
+        [SyncVar]
         public string playerName;
+        [SyncVar]
+        public Color playerColor;
 
         private bool _isMyPlayer;
         private bool _previouslyReady;
@@ -28,32 +42,49 @@ namespace GameJam
             base.Start();
             var roomUi = FindObjectOfType<RoomUi>();
 
-            var tr = transform;
+            var tr = rootObject.transform;
             tr.SetParent(roomUi.roomPlayerRoot);
             tr.localScale = Vector3.one;
             tr.position = Vector3.zero;
+            
+            tempCanvas.gameObject.SetActive(false);
 
             playerNameLabel.text = playerName;
             playerIdLabel.text = $"Player {index + 1}";
             UpdateReadyLabel();
 
             _isMyPlayer = NetworkClient.active && isLocalPlayer;
-            
-            playerReadyButton.gameObject.SetActive(_isMyPlayer);
-            var readyButtonLabel = playerReadyButton.GetComponentInChildren<TMP_Text>();
-            UpdateButtonLabel(readyButtonLabel);
-            playerReadyButton.onClick.AddListener(()=>
+
+            roomUi.readyButton.gameObject.SetActive(_isMyPlayer);
+            var readyButtonLabel = roomUi.readyButton.GetComponentInChildren<TMP_Text>();
+            UpdateButtonLabel(readyButtonLabel, false);
+            roomUi.readyButton.onClick.AddListener(() =>
             {
-                UpdateButtonLabel(readyButtonLabel);
+                UpdateButtonLabel(readyButtonLabel, !readyToBegin);
                 CmdChangeReadyState(!readyToBegin);
             });
+
+            var showKickButton = (isServer && index > 0) || isServerOnly;
+            kickButton.gameObject.SetActive(showKickButton);
+            kickButton.onClick.AddListener(() => { GetComponent<NetworkIdentity>().connectionToClient.Disconnect(); });
+
+            playerColor = PlayerColors[index % PlayerColors.Length];
+            playerImage.color = playerColor;
 
             _started = true;
         }
 
-        private void UpdateButtonLabel(TMP_Text readyButtonLabel)
+        private void OnDestroy()
         {
-            readyButtonLabel.text = readyToBegin ? "Ready" : "Cancel";
+            if (rootObject != null)
+            {
+                Destroy(rootObject);
+            }
+        }
+
+        private void UpdateButtonLabel(TMP_Text readyButtonLabel, bool ready)
+        {
+            readyButtonLabel.text = !ready ? "Ready" : "Cancel";
         }
 
         private void UpdateReadyLabel()
@@ -64,8 +95,8 @@ namespace GameJam
         private void Update()
         {
             if (!_started) return;
-            
-            if (_previouslyReady!=readyToBegin)
+
+            if (_previouslyReady != readyToBegin)
             {
                 _previouslyReady = readyToBegin;
                 UpdateReadyLabel();

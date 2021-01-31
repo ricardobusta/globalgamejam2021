@@ -1589,7 +1589,7 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   runInBackground: 1
   autoStartServerBuild: 1
-  showDebugMessages: 0
+  showDebugMessages: 1
   serverTickRate: 30
   offlineScene: Assets/Scenes/Networking/Offline.unity
   onlineScene: Assets/Scenes/Networking/Room.unity
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   spawnPrefabs: []
   showRoomGUI: 1
   minPlayers: 1
-  roomPlayerPrefab: {fileID: 2207570637540782238, guid: 502da9f3daa15dd4b854cf27fbf160bd, type: 3}
+  roomPlayerPrefab: {fileID: 3858719613207603559, guid: 538b5b5159ce31a40ba46576d41aaff8, type: 3}
   RoomScene: Assets/Scenes/Networking/Room.unity
   GameplayScene: Assets/Scenes/Networking/Online.unity
   _allPlayersReady: 0

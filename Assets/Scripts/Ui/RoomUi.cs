@@ -10,9 +10,10 @@ namespace GameJam
     {
         public TMP_Text serverInfo;
         public Button stopButton;
+        public Button readyButton;
 
         public Transform roomPlayerRoot;
-        
+
         private void Start()
         {
             var networkManager = FindObjectOfType<MyNetworkRoomManager>();

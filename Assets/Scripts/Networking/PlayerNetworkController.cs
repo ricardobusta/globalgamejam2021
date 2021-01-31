@@ -8,12 +8,15 @@ namespace GameJam
         [SerializeField] private BodyMovement _bodyMovement;
         [SerializeField] private Rigidbody2D _rigidBody;
 
-        public SpriteRenderer playerSprite;
-
+        public SpriteRenderer spriteRenderer;
+        
+        [SyncVar]
         public Color color;
 
         private void FixedUpdate()
         {
+            spriteRenderer.color = color;
+            
             if (!isLocalPlayer) return;
 
             var movement = _bodyMovement.ProcessUpdate(Time.fixedDeltaTime);
