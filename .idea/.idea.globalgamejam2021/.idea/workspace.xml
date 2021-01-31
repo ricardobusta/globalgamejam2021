@@ -23,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +57,9 @@
         <option value="$PROJECT_DIR$/Assets/ThirdParty/Mirror/Components/NetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyMatchController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
       </list>
     </option>
   </component>
@@ -222,10 +223,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2535" y="119" width="689" height="801" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612098519133" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612098642674">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612129102689">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612098642674" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612129102689" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

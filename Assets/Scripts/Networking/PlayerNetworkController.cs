@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using Mirror;
 using UnityEngine;
 
@@ -19,6 +20,12 @@ namespace GameJam
         private void Awake()
         {
             animator.runtimeAnimatorController = playerAnimator[0];
+        }
+
+        public override void OnStartLocalPlayer()
+        {
+            FindObjectOfType<CinemachineVirtualCamera>().Follow = transform;
+            FindObjectOfType<FieldOfView>().SetTarget(transform);
         }
 
         private void FixedUpdate()

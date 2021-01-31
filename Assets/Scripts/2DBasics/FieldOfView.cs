@@ -9,6 +9,11 @@ public class FieldOfView : MonoBehaviour
     [SerializeField] private Material _litMaterial;
     [SerializeField] private Material _diffuseMaterial;
 
+    public void SetTarget(Transform target)
+    {
+        _target = target;
+    }
+    
     private void Update()
     {
         if (_target == null) return;
