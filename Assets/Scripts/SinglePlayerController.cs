@@ -11,7 +11,7 @@ namespace GameJam
 
         private void FixedUpdate()
         {
-            var movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
+            var movement = _bodyMovement.ProcessUpdate(Time.fixedDeltaTime);
             _rigidBody.velocity = movement.velocity;
             _fov.SetDirection(movement.lookDirection);
         }

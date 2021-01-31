@@ -19,16 +19,14 @@ namespace GameJam
             {
                 _direction = inputDirection.normalized;
                 _movementSpeed = Mathf.Min(1, _movementSpeed + _acceleration);
+                _lookDirection = Vector3.RotateTowards(_lookDirection, _direction, _rotationSpeed * deltaTime, 0);
             }
             else
             {
                 _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
             }
-            
-            _lookDirection = _direction != Vector3.zero
-                ? Vector3.RotateTowards(_lookDirection, _direction, _rotationSpeed * deltaTime, 0)
-                : _lookDirection;
-            return (_direction * (_movementSpeed * _maxSpeed), _lookDirection);
+
+            return (_direction * _movementSpeed * _maxSpeed * deltaTime, _lookDirection);
         }
     }
 }

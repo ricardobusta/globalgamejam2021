@@ -20,7 +20,7 @@ public class FieldOfView : MonoBehaviour
         _meshFilter.mesh = _mesh;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         SetOrigin(Vector3.zero);
         GenerateMesh();
