@@ -19,6 +19,6 @@ public class FollowCamera : MonoBehaviour
         Vector2 movement = targetPosition - currentPosition;
 
         Vector2 result = currentPosition + movement * _speed * Time.deltaTime;
-        _transform.position = new Vector3(result.x, result.y);
+        _transform.position = new Vector3(result.x, result.y, _transform.position.z);
     }
 }

@@ -30,7 +30,7 @@ namespace GameJam
 
             Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
             _rigidBody.velocity = movement.Velocity;
-            transform.rotation = movement.Rotation;
+            // transform.rotation = movement.Rotation;
         }
     }
 }

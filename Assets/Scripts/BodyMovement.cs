@@ -4,12 +4,12 @@ namespace GameJam
 {
     public struct Movement
     {
-        public Quaternion Rotation { get; }
+        public Vector3 Direction { get; }
         public Vector3 Velocity { get; }
 
-        public Movement(Quaternion rotation, Vector3 velocity)
+        public Movement(Vector3 direction, Vector3 velocity)
         {
-            Rotation = rotation;
+            Direction = direction;
             Velocity = velocity;
         }
     }
@@ -41,19 +41,13 @@ namespace GameJam
                 _movementSpeed = 0;
             }
 
-            Quaternion rotation = transform.rotation;
-            Quaternion rotate = _direction != Vector3.zero
-                ? Quaternion.RotateTowards(rotation, Quaternion.LookRotation(Vector3.forward, _direction),
-                    _rotationSpeed * deltaTime)
-                : rotation;
-
             Vector3 movement = Vector3.zero;
             if (_movementSpeed > Mathf.Epsilon)
             {
                 movement = _direction * _movementSpeed * _maxSpeed * deltaTime;
             }
 
-            return new Movement(rotate, movement);
+            return new Movement(_direction, movement);
         }
     }
 }

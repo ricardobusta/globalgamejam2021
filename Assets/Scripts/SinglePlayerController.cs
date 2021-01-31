@@ -7,12 +7,13 @@ namespace GameJam
     {
         [SerializeField] private BodyMovement _bodyMovement;
         [SerializeField] private Rigidbody _rigidBody;
+        [SerializeField] private FieldOfView _fov;
 
         private void FixedUpdate()
         {
             Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
             _rigidBody.velocity = movement.Velocity;
-            transform.rotation = movement.Rotation;
+            _fov.SetDirection(movement.Direction);
         }
     }
 }
