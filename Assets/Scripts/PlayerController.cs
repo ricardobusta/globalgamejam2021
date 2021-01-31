@@ -1,4 +1,3 @@
-using System;
 using Mirror;
 using UnityEngine;
 
@@ -30,7 +29,6 @@ namespace GameJam
 
             Movement movement = _bodyMovement.ProcessUpdate(Time.deltaTime);
             _rigidBody.velocity = movement.Velocity;
-            // transform.rotation = movement.Rotation;
         }
     }
 }

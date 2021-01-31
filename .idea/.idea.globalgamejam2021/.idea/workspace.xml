@@ -23,8 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatePlayerMessage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreatePlayerMessage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,18 +46,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CreatePlayerMessage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/NetworkUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreatePlayerMessage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameRoomManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/ThirdParty/Mirror/Editor/SceneDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/OfflineUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUiRoot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OnlineUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameNetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/OfflineUi.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
       </list>
     </option>
   </component>
@@ -58,6 +77,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -106,6 +127,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612009930239</updated>
       <workItem from="1612009948120" duration="9494000" />
+      <workItem from="1612043330154" duration="40000" />
+      <workItem from="1612043545858" duration="5609000" />
     </task>
     <servers />
   </component>
@@ -124,14 +147,102 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612034200827">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1612044061676">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612034200827" />
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1612044061675">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061675" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1612044061675">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061675" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1612044061675">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061675" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1612044061676">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044061676" />
+    <state x="2535" y="119" width="689" height="801" key="find.popup" timestamp="1612044011488">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2535" y="119" width="689" height="801" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612044011488" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1612047801533">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612047801533" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/ThirdParty/Mirror/Runtime/NetworkManager.cs</url>
+          <line>847</line>
+          <properties documentPath="D:\Projects\globalgamejam2021\Assets\ThirdParty\Mirror\Runtime\NetworkManager.cs" initialLine="847">
+            <startOffsets>
+              <option value="35257" />
+            </startOffsets>
+            <endOffsets>
+              <option value="35319" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
