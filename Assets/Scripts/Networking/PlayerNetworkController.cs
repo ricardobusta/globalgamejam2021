@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameJam
 {
-    public class PlayerController : NetworkBehaviour
+    public class PlayerNetworkController : NetworkBehaviour
     {
         [SerializeField] private BodyMovement _bodyMovement;
         [SerializeField] private Rigidbody2D _rigidBody;
@@ -11,17 +11,6 @@ namespace GameJam
         public SpriteRenderer playerSprite;
 
         public Color color;
-
-        public override void OnStartClient()
-        {
-            base.OnStartClient();
-            playerSprite.color = color;
-        }
-
-        public void LateUpdate()
-        {
-            playerSprite.transform.rotation = Quaternion.identity;
-        }
 
         private void FixedUpdate()
         {
