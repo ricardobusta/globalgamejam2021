@@ -31,6 +31,7 @@ public class MyNetworkRoomManager : NetworkRoomManager
         var playerObject = gamePlayer.GetComponent<PlayerNetworkController>();
 
         playerObject.color = roomObject.playerColor;
+        playerObject.index = roomObject.index;
         Debug.Log($"Color: {playerObject.color}");
         //PlayerScore playerScore = gamePlayer.GetComponent<PlayerScore>();
         //playerScore.index = roomPlayer.GetComponent<NetworkRoomPlayer>().index;

@@ -171,7 +171,15 @@ MonoBehaviour:
   _bodyMovement: {fileID: 3508246410170796180}
   _rigidBody: {fileID: 5109074539095653606}
   spriteRenderer: {fileID: 1443286780042273897}
+  animator: {fileID: 2947644338898750696}
+  playerAnimator:
+  - {fileID: 9100000, guid: 24b7444bb8bb6714aa36cc8fd62d1301, type: 2}
+  - {fileID: 22100000, guid: d3108bd22f45fad42bc5eb885dde542e, type: 2}
+  - {fileID: 22100000, guid: c17b03d4e64b2624dbde61c077ea0cb6, type: 2}
+  - {fileID: 22100000, guid: 2f06342cadd5d434ca0c3cccdaf05ce2, type: 2}
+  - {fileID: 22100000, guid: e792d05d38cf27244a9b8049a8a538b6, type: 2}
   color: {r: 0, g: 0, b: 0, a: 0}
+  index: 0
 --- !u!114 &1638052708267689091
 MonoBehaviour:
   m_ObjectHideFlags: 0
