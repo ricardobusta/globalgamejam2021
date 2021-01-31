@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FOV
       objectReference: {fileID: 0}
+    - target: {fileID: 1409554679419729900, guid: 04f03eae54459884ca384d293c040f06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1409554679419729907, guid: 04f03eae54459884ca384d293c040f06, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -856,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 9060636187578195985, guid: caaf4f2776bf19946b493f8d4c8f02d6, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060636187578195987, guid: caaf4f2776bf19946b493f8d4c8f02d6, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9060636187699407798, guid: caaf4f2776bf19946b493f8d4c8f02d6, type: 3}
       propertyPath: m_LocalPosition.x

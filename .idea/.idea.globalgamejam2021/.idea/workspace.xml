@@ -24,7 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +61,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Ui/RoomUi.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyMatchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/2DBasics/FieldOfView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" />
       </list>
     </option>
   </component>

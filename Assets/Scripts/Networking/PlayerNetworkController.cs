@@ -41,6 +41,11 @@ namespace GameJam
             Debug.Log(newValue);
             index = newValue;
             animator.runtimeAnimatorController = playerAnimator[newValue];
+
+            if (newValue > 0)
+            {
+                gameObject.layer = LayerMask.NameToLayer("HumanPlayer");
+            }
         }
     }
 }
