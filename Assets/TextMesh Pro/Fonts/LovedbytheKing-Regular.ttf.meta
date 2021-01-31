@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9288e3a27d7d36348b2e5e0ce3286d12
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Loved by the King
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 19e51badc3aea7f4e97e6458168ea3d8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
