@@ -10,10 +10,12 @@ namespace GameJam
     {
         public TMP_Text serverInfo;
         public Button stopButton;
+
+        public Transform roomPlayerRoot;
         
         private void Start()
         {
-            var networkManager = FindObjectOfType<GameNetworkManager>();
+            var networkManager = FindObjectOfType<MyNetworkRoomManager>();
             var transport = FindObjectOfType<SimpleWebTransport>();
             
             serverInfo.text = $"Transport: {Transport.activeTransport}\nAddress: {networkManager.networkAddress}:{transport.port}";

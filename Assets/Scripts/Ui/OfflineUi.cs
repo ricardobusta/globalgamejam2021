@@ -17,7 +17,7 @@ namespace GameJam
 
         private void Start()
         {
-            var networkManager = FindObjectOfType<GameNetworkManager>();
+            var networkManager = FindObjectOfType<MyNetworkRoomManager>();
             var transport = FindObjectOfType<SimpleWebTransport>();
 
             hostAddress.SetTextWithoutNotify(networkManager.networkAddress);

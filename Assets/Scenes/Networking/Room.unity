@@ -349,7 +349,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 778894684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -357,15 +357,13 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 300, y: 400}
+  m_Spacing: {x: 20, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!114 &778894687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverInfo: {fileID: 1323804311}
   stopButton: {fileID: 581899317}
+  roomPlayerRoot: {fileID: 778894685}
 --- !u!4 &1792653794
 Transform:
   m_ObjectHideFlags: 0

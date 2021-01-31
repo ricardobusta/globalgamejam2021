@@ -5,7 +5,7 @@ using Mirror.Examples.NetworkRoom;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameNetworkManager : NetworkRoomManager
+public class MyNetworkRoomManager : NetworkRoomManager
 {
       [Header("Spawner Setup")]
         [Tooltip("Reward Prefab for the Spawner")]
