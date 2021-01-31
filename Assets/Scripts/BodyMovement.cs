@@ -20,7 +20,7 @@ namespace GameJam
                 _direction = inputDirection.normalized;
                 _movementSpeed = Mathf.Min(1, _movementSpeed + _acceleration);
             }
-            else if (_movementSpeed > 0)
+            else
             {
                 _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
             }
