@@ -28,6 +28,10 @@ namespace GameJam
                 transport.port = GetPort(hostPort.text);
                 networkManager.StartHost();
             });
+            
+#if UNITY_WEBGL
+            hostAndClientButton.gameObject.SetActive(false);
+#endif
 
             clientButton.onClick.AddListener(() =>
             {
