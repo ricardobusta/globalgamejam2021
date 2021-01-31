@@ -9,9 +9,14 @@ namespace GameJam
         [SerializeField] private Rigidbody2D _rigidBody;
 
         public SpriteRenderer spriteRenderer;
+        public Animator animator;
+        public RuntimeAnimatorController[] playerAnimator;
         
         [SyncVar(hook = nameof(PlayerColorChanged))]
         public Color color;
+        
+        [SyncVar(hook = nameof(PlayerIndexChanged))]
+        public int index;
 
         private void FixedUpdate()
         {
@@ -23,7 +28,11 @@ namespace GameJam
 
         public void PlayerColorChanged(Color _, Color newValue)
         {
-            spriteRenderer.color = newValue;
+        }
+        
+        public void PlayerIndexChanged(int _, int newValue)
+        {
+            animator.runtimeAnimatorController = playerAnimator[newValue];
         }
     }
 }
