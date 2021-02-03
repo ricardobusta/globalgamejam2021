@@ -6,27 +6,47 @@ namespace GameJam
     {
         [SerializeField] private float _maxSpeed;
         [SerializeField] private float _rotationSpeed;
-        [Range(0f, 1f)] [SerializeField] private float _acceleration;
+        [SerializeField] private float _acceleration;
+        
+        private Rigidbody2D _rigidBody;
 
+        private Transform lightTransform;
+        
         private float _movementSpeed;
-        private Vector3 _direction;
-        private Vector3 _lookDirection = Vector3.up;
+        private Vector3 _direction = Vector3.down;
 
-        public (Vector3 velocity, Vector3 lookDirection) ProcessUpdate(float deltaTime)
+        private void Awake()
+        {
+            _rigidBody = GetComponent<Rigidbody2D>();
+        }
+
+        public void SetLightTransform(Transform light)
+        {
+            lightTransform = light;
+        }
+
+        private void FixedUpdate()
         {
             var inputDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
             if (inputDirection.sqrMagnitude > float.Epsilon)
             {
                 _direction = inputDirection.normalized;
-                _movementSpeed = Mathf.Min(1, _movementSpeed + _acceleration);
-                _lookDirection = Vector3.RotateTowards(_lookDirection, _direction, _rotationSpeed * deltaTime, 0);
+                _movementSpeed += _acceleration * Time.fixedDeltaTime;
             }
             else
             {
-                _movementSpeed = Mathf.Max(0, _movementSpeed - _acceleration);
+                _movementSpeed -= _acceleration * Time.fixedDeltaTime;
             }
 
-            return (_direction * _movementSpeed * _maxSpeed * deltaTime, _lookDirection);
+            if ((lightTransform.up - _direction).sqrMagnitude > float.Epsilon)
+            {
+                lightTransform.up = Vector3.RotateTowards(lightTransform.up, _direction, 
+                    _rotationSpeed * Time.fixedDeltaTime, 0);
+            }
+
+            _movementSpeed = Mathf.Clamp(_movementSpeed, 0, _maxSpeed);
+
+            _rigidBody.velocity = _direction * _movementSpeed;
         }
     }
 }

@@ -16,8 +16,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="2DBasics" t="Include">
-            <e p="FieldOfView.cs" t="Include" />
-            <e p="FollowCamera.cs" t="Include" />
+            <e p="LightController.cs" t="Include" />
           </e>
           <e p="BodyMovement.cs" t="Include" />
           <e p="Networking" t="Include">
@@ -26,7 +25,6 @@
             <e p="MyNetworkRoomPlayer.cs" t="Include" />
             <e p="PlayerNetworkController.cs" t="Include" />
           </e>
-          <e p="SinglePlayerController.cs" t="Include" />
           <e p="Ui" t="Include">
             <e p="OfflineUi.cs" t="Include" />
             <e p="OnlineUi.cs" t="Include" />

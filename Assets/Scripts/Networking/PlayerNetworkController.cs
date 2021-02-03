@@ -1,4 +1,3 @@
-using System;
 using Cinemachine;
 using Mirror;
 using UnityEngine;
@@ -7,8 +6,7 @@ namespace GameJam
 {
     public class PlayerNetworkController : NetworkBehaviour
     {
-        [SerializeField] private BodyMovement _bodyMovement;
-        [SerializeField] private Rigidbody2D _rigidBody;
+        private BodyMovement _bodyMovement;
 
         public SpriteRenderer spriteRenderer;
         public Animator animator;
@@ -19,21 +17,21 @@ namespace GameJam
 
         private void Awake()
         {
+            _bodyMovement = GetComponent<BodyMovement>();
+            _bodyMovement.enabled = false;
+            
             animator.runtimeAnimatorController = playerAnimator[0];
         }
 
         public override void OnStartLocalPlayer()
         {
+            _bodyMovement.enabled = true;
             FindObjectOfType<CinemachineVirtualCamera>().Follow = transform;
-            FindObjectOfType<FieldOfView>().SetTarget(transform);
-        }
-
-        private void FixedUpdate()
-        {
-            if (!isLocalPlayer) return;
-
-            var movement = _bodyMovement.ProcessUpdate(Time.fixedDeltaTime);
-            _rigidBody.velocity = movement.velocity;
+            var lightTransform = FindObjectOfType<LightController>().transform;
+            lightTransform.SetParent(transform);
+            lightTransform.localPosition = Vector3.zero;
+            
+            _bodyMovement.SetLightTransform(lightTransform);
         }
 
         public void PlayerIndexChanged(int _, int newValue)

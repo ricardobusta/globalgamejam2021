@@ -1,5 +1,4 @@
 ﻿using System;
-using Cinemachine;
 using Mirror;
 using TMPro;
 using UnityEngine;
