@@ -23,46 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9e35d39-6dcf-449f-86e8-f415492503b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/2DBasics/LightController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.globalgamejam2021/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lightable.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Lightable.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerBody.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerBody.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ui/Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ui/Button.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MatchController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/MatchController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MatchController.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/MatchController.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Player.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Room/RoomPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayer.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Room/RoomPlayer.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayerOld.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RoomPlayerOld.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SinglePlayer.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SinglePlayer.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Networking/Online.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Networking/Online/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Room.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Gameplay.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Gameplay.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ui.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/2DBasics/FieldOfView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/2DBasics/FieldOfView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/2DBasics/LightController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/2DBasics/FollowCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/2DBasics/FollowCamera.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BodyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyMatchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyMatchController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/MyNetworkRoomPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Networking/PlayerNetworkController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SinglePlayerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cookie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/cookie.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +125,7 @@
       <workItem from="1612043330154" duration="40000" />
       <workItem from="1612043545858" duration="19471000" />
       <workItem from="1612386714587" duration="171000" />
-      <workItem from="1612388169644" duration="1410000" />
+      <workItem from="1612388169644" duration="2026000" />
     </task>
     <servers />
   </component>

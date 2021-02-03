@@ -10,7 +10,7 @@ namespace GameJam
         
         private Rigidbody2D _rigidBody;
 
-        private Transform lightTransform;
+        private Transform _lightTransform;
         
         private float _movementSpeed;
         private Vector3 _direction = Vector3.down;
@@ -22,7 +22,7 @@ namespace GameJam
 
         public void SetLightTransform(Transform light)
         {
-            lightTransform = light;
+            _lightTransform = light;
         }
 
         private void FixedUpdate()
@@ -38,9 +38,9 @@ namespace GameJam
                 _movementSpeed -= _acceleration * Time.fixedDeltaTime;
             }
 
-            if ((lightTransform.up - _direction).sqrMagnitude > float.Epsilon)
+            if ((_lightTransform.up - _direction).sqrMagnitude > float.Epsilon)
             {
-                lightTransform.up = Vector3.RotateTowards(lightTransform.up, _direction, 
+                _lightTransform.up = Vector3.RotateTowards(_lightTransform.up, _direction, 
                     _rotationSpeed * Time.fixedDeltaTime, 0);
             }
 
